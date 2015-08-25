@@ -11,6 +11,10 @@ public class AlunoService {
 
 	public void inserirAluno(Aluno novoAluno) throws Exception {
 		// this.validarAluno(novoAluno)
+		inserirAlunoBD(novoAluno);
+	}
+
+	private void inserirAlunoBD(Aluno novoAluno) throws Exception {
 		Connection connection = null;
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/padraodao", "postgres",
